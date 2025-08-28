@@ -1,6 +1,4 @@
-import { useState } from 'react';
-import './App.css';
-import { HashRouter, BrowserRouter, Routes, Route, Router} from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Components/Home/Home';
 import Layout from './Components/Layout';
@@ -10,8 +8,7 @@ import Contact from './Components/Contact/Contact';
 
 function App() {
   return (
-     
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <Routes>
         <Route index element={<Layout><Home /></Layout>} />
@@ -19,7 +16,7 @@ function App() {
         <Route path="about" element={<Layout><About /></Layout>} />
         <Route path="contact" element={<Layout><Contact /></Layout>} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   ); 
 }
 
