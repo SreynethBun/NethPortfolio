@@ -8,7 +8,7 @@ import Contact from './Components/Contact/Contact';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/NethPortfolio'>
       <Navbar />
       <Routes>
         <Route index element={<Layout><Home /></Layout>} />
